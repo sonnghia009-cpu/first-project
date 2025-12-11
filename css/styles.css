@@ -82,7 +82,7 @@ body {
 }
 .label {
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 340px;
     background: white;
     padding: 20px 18px;
@@ -95,7 +95,7 @@ body {
 }
 .title {
     position: absolute;
-    top: 320px;
+    top: 280px;
     left: 340px;
     color: white;
     font-size: 80px;
