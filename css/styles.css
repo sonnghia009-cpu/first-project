@@ -1,111 +1,104 @@
 * {
-    font-family: sans-serif;
-}
-
-header {
-    padding: 0 100px;
-}
-
-/* MENU NẰM NGANG */
-.menu {
+    margin: 0;
     padding: 0;
-    list-style-type: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+.header {
+    width: 100%;
+    padding: 32px 40px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ff5c20;
+}
+.menu {
+    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 50px;              
 }
-
-/* LOGO */
-.logo {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: xxx-large;
-    font-weight: 600;
-    margin-right: 300px;
-    color: rgb(239, 66, 35);
-}
-
-/* HÌNH BANNER */
-.banner {
-    width: 100%;
-}
-
-/* ======================= */
-/*        SLIDER           */
-/* ======================= */
-.slider {
-    position: relative;
-}
-
-/* Nhãn Toronto – Canada */
-.label {
-    position: absolute;
-    top: 35%;
-    left: 20%;
-    background: white;
-    padding: 20px 35px;
-    border-radius: 6px;
-    font-size: 20px;
-    /* font-weight: bold; */
-}
-
-.label span {
-    color: rgb(239, 66, 35);
-    font-style: italic;
-}
-
-/* Tiêu đề lớn overlay */
-.title {
-    position: absolute;
-    top: 60%;
-    left: 20%;
-    transform: translateY(-50%);
-    font-size: 80px;
+.menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
     font-weight: 700;
-    color: white;
-    line-height: 70px;
+    padding: 8px 0;
+    display: block;
+    transition: 0.2s;
+    color: #ff4d00;
 }
-
-/* ======================= */
-/*       DROPDOWN          */
-/* ======================= */
 .dropdown {
     position: relative;
 }
-
 .dropdown-list {
     position: absolute;
-    top: 40px;
+    top: 45px;
     left: 0;
-
+    min-width: 160px;
+    background: white;                     
     list-style: none;
     padding: 10px 0;
-    margin: 0;
-
-    width: 160px;
-    background: white;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
+    border-radius: 6px;                   
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15); 
+    
     opacity: 0;
-    pointer-events: none;
-    transform: translateY(10px);
-    transition: 0.25s;
+    visibility: hidden;
+    transform: translateY(10px);           
+    transition: 0.25s ease;
+    z-index: 999;
 }
-
-.dropdown-list li a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: black;
-}
-
 .dropdown:hover .dropdown-list {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
     transform: translateY(0);
 }
-
+.dropdown-list li a {
+    padding: 10px 20px;
+    font-size: 17px;
+    color: black;
+}
 .dropdown-list li a:hover {
-    background: rgb(245, 245, 245);
+    background: #f7f7f7;
+    color: #ff4d00;
+}
+.slider {
+    position: relative;
+}
+.banner {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+}
+.label {
+    position: absolute;
+    top: 250px;
+    left: 340px;
+    background: white;
+    padding: 20px 18px;
+    border-radius: 6px;
+    font-size: 25px;
+}
+.label span {
+    font-style: italic;
+    color: #d75d3d;
+}
+.title {
+    position: absolute;
+    top: 320px;
+    left: 340px;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1.1;
 }
